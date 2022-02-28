@@ -15,7 +15,6 @@ subprojects{
             url = "https://lightningcreations.github.io/Maven"
             name = "Lightning Creations Maven"
         }
-        jcenter()
         mavenCentral()
     }
 
@@ -60,7 +59,6 @@ repositories {
         url = "https://lightningcreations.github.io/Maven"
         name = "Lightning Creations Maven"
     }
-    jcenter()
     mavenCentral()
 }
 
