@@ -10,11 +10,19 @@ public interface LauncherInterface {
      * Which services are available are launcher specific
      *
      * @param <S> The statically known type of the service
-     * @param ty The runtime class of the service
+     * @param cl The runtime class of the service
      * @return A service from the launcher fulfilling cl, if it exists, or an empty optional
      * @throws SecurityException if the service requested belongs to a launcher-specific set of privileged services,
      * and the {@link ServicePermission} is denied to the caller
      * @throws IllegalStateException if called prior to preinit
      */
-    public <S extends LauncherService> Optional<S> getService(Class<S> ty);
+    public <S extends LauncherService> Optional<S> getService(Class<S> cl);
+
+
+    /**
+     * Returns the Brand of the Launcher exposed via this interface.
+     */
+    public String getLauncherBrand();
+
+
 }
